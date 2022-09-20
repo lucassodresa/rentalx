@@ -31,8 +31,6 @@ class ImportCategoryUseCase {
         .on("error", (err) => {
           reject(err);
         });
-
-      // return categories;
     });
   }
 
