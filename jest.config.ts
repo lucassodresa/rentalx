@@ -1,7 +1,8 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-import-module-exports
+import { pathsToModuleNameMapper } from "ts-jest";
+
+// eslint-disable-next-line import/no-import-module-exports
+import { compilerOptions } from "./tsconfig.json";
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
@@ -88,7 +89,9 @@ module.exports = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: "<rootDir>/src/",
+  }),
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
