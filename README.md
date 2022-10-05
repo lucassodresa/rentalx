@@ -2,13 +2,11 @@
 
 **RF**
 - It should be possible to register a new car.
-- It should be possible to list all categories.
 
 **RN**
 - It should not be possible to register a car with an existing license plate.
-- It should not be possible to edit the license plate of an existing car.
 - The car should be registered as available by default.
-- The user role responsible for registration should be an administrator.
+* The user role responsible for registration should be an administrator.
 
 
 
